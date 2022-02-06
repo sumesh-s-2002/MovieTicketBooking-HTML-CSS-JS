@@ -1,0 +1,83 @@
+*,*::after,*::before{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: rgb(33, 38, 55);
+    color : #fff;
+}
+.movie-container{
+    display : flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.movie-container label{
+    font-size: .9rem;
+}
+.movie-container select{
+    margin-left: 10px;
+    border-radius: 5px;
+    padding : 3px 8px;
+}
+.showcase{
+    display: flex;
+    gap: 15px;
+    margin-left: -25px;
+}
+.showcase li {
+    display : flex;
+    list-style: none;
+    align-items: center;
+    justify-content:space-between;
+    gap: 5px;
+}
+.seat{
+    width: 15px;
+    height: 15px;
+    background-color: rgb(86, 92, 109);
+    border-top-left-radius : 50%;
+    border-top-right-radius: 50%;
+    cursor: pointer;
+}
+.occupied{
+    background-color:rgb(33, 235, 235);
+}
+.selected{
+    background-color: white;
+}
+.container{
+    display : flex;
+    flex-direction: column;
+    gap : 5px;
+    align-items: center;
+    margin-bottom: 15px;
+    perspective: 100000px;
+}
+.row{
+    display : flex;
+    flex-direction: row;
+    gap: 8px;
+}
+.row :nth-child(2){
+    margin-right: 8px;
+}
+.row :nth-child(6){
+    margin-right: 8px;
+}
+.screen{
+    width: 150px;
+    height: 80px;
+    background-color: white;
+    transform: rotateX(45deg);
+    perspective: 100000px;
+    box-shadow: 3px 10px 10px rgba(255, 255, 255, 0.364);
+}
+.seat:not(.occupied):hover{
+    transform : scale(1.1);
+}
